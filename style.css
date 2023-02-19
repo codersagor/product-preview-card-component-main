@@ -1,0 +1,174 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* main css start  */
+.mobile_photo {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* main card  */
+.card {
+  margin: auto 10px;
+  display: flex;
+  background: #ffff;
+  max-width: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+img.desktop_photo {
+  height: 100%;
+  width: auto;
+}
+.card_content {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card_category {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: hsl(158, 36%, 37%);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.card_title {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.card_desc {
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+}
+.card_price {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.discount_price {
+  font-size: 2rem;
+  margin-right: 20px;
+  font-family: "Fraunces";
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+.original_price {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+a.btn {
+  text-decoration: none;
+  background-color: hsl(158, 36%, 37%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+}
+a.btn:hover {
+  background: hsl(156, 41%, 18%);
+}
+.btn .icon {
+  margin-right: 10px;
+}
+/* responsive  */
+@media screen and (max-width: 500px) {
+  .desktop_photo {
+    display: none;
+  }
+  .mobile_photo {
+    display: block;
+  }
+  .card {
+    flex-direction: column;
+  }
+}
